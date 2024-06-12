@@ -76,6 +76,7 @@ print(rna)
 #################################
 #FILTER SARC_TRUTH AND RNA TO HAVE THE SAME SAMPLE 
 ##############################
+
 rna.rename_axis('SAMPLE_ID', inplace=True)
 
 # Get the intersection of sample IDs between sarc_truth and rna
