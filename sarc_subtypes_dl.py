@@ -55,19 +55,20 @@ rna=pd.read_csv( "/home/arianna/subtype_dl/data_mrna_seq_v2_rsem.txt", sep='\t')
 #remove the column with entrez_gene_id
 rna = rna.drop(rna.columns[1], axis=1) 
 
-        
+rna_filtered = rna.dropna(subset=['Hugo_Symbol'])
+
+# Drop duplicates (in Hugo_Symbol), keeping only the first occurrence
+rna_no_dup = rna_filtered.drop_duplicates(subset=['Hugo_Symbol'], keep='first')
+
 #traspose the rna dataframe 
-rna=rna.T
-        
+rna=rna_no_dup.T
+      
 #use the first row (with gene names as the column names for the dataframe)
 new_colnames = rna.iloc[0, :]
 
 # Assign the new column names (dropping the first row to avoid duplicates)
 rna.columns = new_colnames
 rna=rna[1:]  # Return the DataFrame excluding the first row (used for column names)
-
-#remove columns with no gene name 
-rna = rna[rna.columns.dropna()]
 
 print(rna)
 
