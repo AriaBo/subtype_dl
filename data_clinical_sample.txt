@@ -1,0 +1,260 @@
+#Patient Identifier	Sample Identifier	Oncotree Code	Cancer Type	Cancer Type Detailed	Tumor Type	Neoplasm Histologic Grade	Tissue Prospective Collection Indicator	Tissue Retrospective Collection Indicator	Tissue Source Site Code	Tumor Disease Anatomic Site	Aneuploidy Score	Sample Type	MSI MANTIS Score	MSIsensor Score	Somatic Status	TMB (nonsynonymous)	Tissue Source Site
+#Identifier to uniquely specify a patient.	A unique sample identifier.	Oncotree Code	Cancer Type	Cancer Type Detailed	Tumor Type	Numeric value to express the degree of abnormality of cancer cells, a measure of differentiation and aggressiveness.	Tissue prospective collection indicator.	Tissue retrospective collection indicator.	Tissue Source Site Code	Text term that describes the anatomic site of the tumor or disease.	Aneuploidy Score	The type of sample (i.e., normal, primary, met, recurrence).	MSI Score reported by MANTIS. The suggested thresholds are MSI: >0.6, Indeterminate: 0.4-0.6 and MSS: <0.4.	MSI Score reported by MSIsensor. The suggested thresholds are MSI: >10, Indeterminate: 4-10 and MSS: <10.	Somatic Status	TMB (nonsynonymous)	A Tissue Source Site collects samples (tissue, cell, or blood) and cliincal metadata which are then sent to tha Biospecimen Core Resource.
+#STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	NUMBER	STRING	NUMBER	NUMBER	STRING	NUMBER	STRING
+#1	1	1	1	1	1	1	1	1	1	1	1	9	9	9	1	1	1
+PATIENT_ID	SAMPLE_ID	ONCOTREE_CODE	CANCER_TYPE	CANCER_TYPE_DETAILED	TUMOR_TYPE	GRADE	TISSUE_PROSPECTIVE_COLLECTION_INDICATOR	TISSUE_RETROSPECTIVE_COLLECTION_INDICATOR	TISSUE_SOURCE_SITE_CODE	TUMOR_TISSUE_SITE	ANEUPLOIDY_SCORE	SAMPLE_TYPE	MSI_SCORE_MANTIS	MSI_SENSOR_SCORE	SOMATIC_STATUS	TMB_NONSYNONYMOUS	TISSUE_SOURCE_SITE
+TCGA-3B-A9HI	TCGA-3B-A9HI-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	3B	Upper Arm/Elbow	21	Primary	0.3475	0.01	Matched	1.3	Moffitt Cancer Center
+TCGA-3B-A9HJ	TCGA-3B-A9HJ-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	3B	Groin	0	Primary	0.321	0	Matched	0.6	Moffitt Cancer Center
+TCGA-3B-A9HL	TCGA-3B-A9HL-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	3B	Retroperitoneum	7	Primary	0.3268	0.15	Matched	1.6	Moffitt Cancer Center
+TCGA-3B-A9HO	TCGA-3B-A9HO-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	3B	Intra-Abdominal	10	Primary	0.3302	0.04	Matched	1.866666667	Moffitt Cancer Center
+TCGA-3B-A9HP	TCGA-3B-A9HP-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	3B	Retroperitoneum	7	Primary	0.36	0	Matched	1.8	Moffitt Cancer Center
+TCGA-3B-A9HQ	TCGA-3B-A9HQ-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	3B	Retroperitoneum	6	Primary	0.3299	0.04	Matched	2.133333333	Moffitt Cancer Center
+TCGA-3B-A9HR	TCGA-3B-A9HR-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	3B	Thigh/Knee	22	Primary	0.3488	0.47	Matched	1.033333333	Moffitt Cancer Center
+TCGA-3B-A9HS	TCGA-3B-A9HS-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	3B	Retroperitoneum	15	Primary	0.3227	0.09	Matched	1.966666667	Moffitt Cancer Center
+TCGA-3B-A9HT	TCGA-3B-A9HT-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	3B	Head and Neck	1	Primary	0.4258	2.94	Matched	10.03333333	Moffitt Cancer Center
+TCGA-3B-A9HU	TCGA-3B-A9HU-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	3B	Retroperitoneum	5	Primary	0.3156	0.03	Matched	0.9	Moffitt Cancer Center
+TCGA-3B-A9HV	TCGA-3B-A9HV-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	3B	Uterus	2	Primary	0.3247	0.14	Matched	1.566666667	Moffitt Cancer Center
+TCGA-3B-A9HX	TCGA-3B-A9HX-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	3B	Colon	24	Primary	0.3176	0.26	Matched	1.333333333	Moffitt Cancer Center
+TCGA-3B-A9HY	TCGA-3B-A9HY-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	3B	Thigh/Knee	7	Primary	0.3201	0.16	Matched	1.533333333	Moffitt Cancer Center
+TCGA-3B-A9HZ	TCGA-3B-A9HZ-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	3B	Mediastinum	4	Primary	0.3057	0	Matched	0.9	Moffitt Cancer Center
+TCGA-3B-A9I0	TCGA-3B-A9I0-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	3B	Retroperitoneum	4	Primary	0.3258	0.18	Matched	1.066666667	Moffitt Cancer Center
+TCGA-3B-A9I1	TCGA-3B-A9I1-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	3B	Uterus	19	Primary	0.3351	0.42	Matched	1	Moffitt Cancer Center
+TCGA-3B-A9I3	TCGA-3B-A9I3-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	3B	Retroperitoneum	11	Primary	0.3191	0.18	Matched	1.466666667	Moffitt Cancer Center
+TCGA-3R-A8YX	TCGA-3R-A8YX-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	Yes	No	3R	Retroperitoneum	21	Primary	0.3379	0.14	Matched	2.2	University of New Mexico
+TCGA-DX-A1KU	TCGA-DX-A1KU-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	DX	Retroperitoneum	19	Primary	0.3089	0.07	Matched	1.533333333	Memorial Sloan Kettering
+TCGA-DX-A1KW	TCGA-DX-A1KW-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	NA	NA	DX	Retroperitoneum	25	Primary	0.3041	0.32	Matched	1.133333333	Memorial Sloan Kettering
+TCGA-DX-A1KX	TCGA-DX-A1KX-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	NA	NA	DX	Pelvis	21	Primary	0.3194	1.45	Matched	2.333333333	Memorial Sloan Kettering
+TCGA-DX-A1KY	TCGA-DX-A1KY-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	NA	NA	DX	Retroperitoneum	15	Primary	0.3374	1.91	Matched	0	Memorial Sloan Kettering
+TCGA-DX-A1KZ	TCGA-DX-A1KZ-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	NA	NA	DX	Retroperitoneum	7	Primary	0.2955	0.11	Matched	0	Memorial Sloan Kettering
+TCGA-DX-A1L0	TCGA-DX-A1L0-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	NA	NA	DX	Retroperitoneum	12	Primary	0.3109	0.3	Matched	2.366666667	Memorial Sloan Kettering
+TCGA-DX-A1L1	TCGA-DX-A1L1-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	NA	NA	DX	Retroperitoneum	11	Primary	0.2903	0.22	Matched	0	Memorial Sloan Kettering
+TCGA-DX-A1L2	TCGA-DX-A1L2-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	NA	NA	DX	Retroperitoneum	10	Primary	0.3001	0.12	Matched	3.9	Memorial Sloan Kettering
+TCGA-DX-A1L3	TCGA-DX-A1L3-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	NA	NA	DX	Retroperitoneum	1	Primary	0.313	0.07	Matched	0	Memorial Sloan Kettering
+TCGA-DX-A1L4	TCGA-DX-A1L4-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	NA	NA	DX	Retroperitoneum	0	Primary	0.2843	0	Matched	0	Memorial Sloan Kettering
+TCGA-DX-A23R	TCGA-DX-A23R-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	NA	NA	DX	Retroperitoneum	3	Primary	0.3058	0.14	Matched	0	Memorial Sloan Kettering
+TCGA-DX-A23T	TCGA-DX-A23T-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	NA	NA	DX	Retroperitoneum	0	Primary	0.3063	0.03	Matched	0	Memorial Sloan Kettering
+TCGA-DX-A23U	TCGA-DX-A23U-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	NA	NA	DX	Pelvis	0	Primary	0.2986	0.08	Matched	0	Memorial Sloan Kettering
+TCGA-DX-A23V	TCGA-DX-A23V-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	NA	NA	DX	Retroperitoneum	0	Primary	0.3023	0.02	Matched	0.433333333	Memorial Sloan Kettering
+TCGA-DX-A23Y	TCGA-DX-A23Y-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	NA	NA	DX	Retroperitoneum	18	Primary	0.3032	0.08	Matched	1.3	Memorial Sloan Kettering
+TCGA-DX-A23Z	TCGA-DX-A23Z-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	NA	NA	DX	Retroperitoneum		Primary			Matched	0	Memorial Sloan Kettering
+TCGA-DX-A240	TCGA-DX-A240-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	NA	NA	DX	Spermatic Cord	1	Primary	0.2822	0.03	Matched	0.6	Memorial Sloan Kettering
+TCGA-DX-A2IZ	TCGA-DX-A2IZ-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	NA	NA	DX	Retroperitoneum	7	Primary	0.3062	0.01	Matched	1.266666667	Memorial Sloan Kettering
+TCGA-DX-A2J0	TCGA-DX-A2J0-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	NA	NA	DX	Retroperitoneum	8	Primary	0.2754	0.32	Matched	1.166666667	Memorial Sloan Kettering
+TCGA-DX-A2J1	TCGA-DX-A2J1-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	NA	NA	DX	Retroperitoneum	0	Primary	0.2796	0	Matched	0.8	Memorial Sloan Kettering
+TCGA-DX-A2J4	TCGA-DX-A2J4-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	NA	NA	DX	Intra-Abdominal	0	Primary	0.2735	0.02	Matched	0.733333333	Memorial Sloan Kettering
+TCGA-DX-A3LS	TCGA-DX-A3LS-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	DX	Retroperitoneum	10	Primary	0.2887	0.14	Matched	1.4	Memorial Sloan Kettering
+TCGA-DX-A3LT	TCGA-DX-A3LT-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	DX	Upper Arm/Elbow	9	Primary	0.2998	0.11	Matched	0	Memorial Sloan Kettering
+TCGA-DX-A3LU	TCGA-DX-A3LU-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	DX	Retroperitoneum	1	Primary	0.2927	0.03	Matched	0.933333333	Memorial Sloan Kettering
+TCGA-DX-A3LW	TCGA-DX-A3LW-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	DX	Retroperitoneum	2	Primary	0.288	0.04	Matched	0.833333333	Memorial Sloan Kettering
+TCGA-DX-A3LY	TCGA-DX-A3LY-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	DX	Retroperitoneum	9	Primary	0.2909	0.06	Matched	1.5	Memorial Sloan Kettering
+TCGA-DX-A3M1	TCGA-DX-A3M1-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	DX	Retroperitoneum	5	Primary	0.3009	0.12	Matched	2.133333333	Memorial Sloan Kettering
+TCGA-DX-A3M2	TCGA-DX-A3M2-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	DX	Retroperitoneum	18	Primary	0.2966	0	Matched	3.033333333	Memorial Sloan Kettering
+TCGA-DX-A3U5	TCGA-DX-A3U5-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	DX	Retroperitoneum	5	Primary	0.3074	0.07	Matched	0.933333333	Memorial Sloan Kettering
+TCGA-DX-A3U6	TCGA-DX-A3U6-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	DX	Retroperitoneum	0	Primary	0.295	0	Matched	0.066666667	Memorial Sloan Kettering
+TCGA-DX-A3U7	TCGA-DX-A3U7-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	DX	Thigh/Knee	18	Primary	0.3028	0.68	Matched	1.033333333	Memorial Sloan Kettering
+TCGA-DX-A3U8	TCGA-DX-A3U8-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	DX	Spermatic Cord	8	Primary	0.292	0	Matched	0.833333333	Memorial Sloan Kettering
+TCGA-DX-A3U9	TCGA-DX-A3U9-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	DX	Lower Abdomen/Pelvis	12	Primary	0.3547	0.16	Matched	1.766666667	Memorial Sloan Kettering
+TCGA-DX-A3UA	TCGA-DX-A3UA-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	DX	Foot/Ankle	6	Primary	0.3437	0.14	Matched	0.866666667	Memorial Sloan Kettering
+TCGA-DX-A3UB	TCGA-DX-A3UB-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	DX	Small Intestine	1	Primary	0.3303	0.03	Matched	0.366666667	Memorial Sloan Kettering
+TCGA-DX-A3UC	TCGA-DX-A3UC-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	DX	Retroperitoneum	6	Primary	0.3481	0.18	Matched	0.933333333	Memorial Sloan Kettering
+TCGA-DX-A3UD	TCGA-DX-A3UD-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	DX	Kidney	18	Primary	0.3265	0.88	Matched	0.833333333	Memorial Sloan Kettering
+TCGA-DX-A3UE	TCGA-DX-A3UE-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	DX	Back	6	Primary	0.3404	0.27	Matched	1.8	Memorial Sloan Kettering
+TCGA-DX-A3UF	TCGA-DX-A3UF-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	DX	Retroperitoneum	11	Primary	0.3385	0.37	Matched	1.6	Memorial Sloan Kettering
+TCGA-DX-A48J	TCGA-DX-A48J-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	DX	Retroperitoneum	1	Primary	0.353	0.05	Matched	0.566666667	Memorial Sloan Kettering
+TCGA-DX-A48K	TCGA-DX-A48K-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	DX	Lower Leg/Calf	8	Primary	0.3526	0.01	Matched	0.8	Memorial Sloan Kettering
+TCGA-DX-A48L	TCGA-DX-A48L-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	DX	Lower Leg/Calf	5	Primary	0.3426	0.41	Matched	1.566666667	Memorial Sloan Kettering
+TCGA-DX-A48N	TCGA-DX-A48N-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	DX	Retroperitoneum	2	Primary	0.3361	0.31	Matched	1.066666667	Memorial Sloan Kettering
+TCGA-DX-A48O	TCGA-DX-A48O-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	DX	Retroperitoneum	5	Primary	0.3142	0.66	Matched	2	Memorial Sloan Kettering
+TCGA-DX-A48P	TCGA-DX-A48P-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	DX	Retroperitoneum	7	Primary	0.3081	0.29	Matched	1.3	Memorial Sloan Kettering
+TCGA-DX-A48R	TCGA-DX-A48R-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	DX	Retroperitoneum	6	Primary	0.3043	0.9	Matched	1.566666667	Memorial Sloan Kettering
+TCGA-DX-A48U	TCGA-DX-A48U-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	DX	Retroperitoneum	4	Primary	0.3147	0.33	Matched	0.733333333	Memorial Sloan Kettering
+TCGA-DX-A48V	TCGA-DX-A48V-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	DX	Retroperitoneum	7	Primary	0.3008	0.5	Matched	1.2	Memorial Sloan Kettering
+TCGA-DX-A6B7	TCGA-DX-A6B7-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	DX	Colon	4	Primary	0.3195	0.04	Matched	0.8	Memorial Sloan Kettering
+TCGA-DX-A6B8	TCGA-DX-A6B8-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	DX	Shoulder/Axilla	16	Primary	0.3383	0.89	Matched	1.466666667	Memorial Sloan Kettering
+TCGA-DX-A6B9	TCGA-DX-A6B9-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	DX	Colon	2	Primary	0.3365	0.01	Matched	0.466666667	Memorial Sloan Kettering
+TCGA-DX-A6BA	TCGA-DX-A6BA-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	DX	Pelvis	27	Primary	0.3059	0.61	Matched	1.566666667	Memorial Sloan Kettering
+TCGA-DX-A6BB	TCGA-DX-A6BB-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	DX	Pelvis	8	Primary	0.3412	0	Matched	1.366666667	Memorial Sloan Kettering
+TCGA-DX-A6BE	TCGA-DX-A6BE-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	DX	Retroperitoneum	0	Primary	0.3324	0.07	Matched	0.866666667	Memorial Sloan Kettering
+TCGA-DX-A6BF	TCGA-DX-A6BF-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	DX	Retroperitoneum	13	Primary	0.2948	0.16	Matched	2.133333333	Memorial Sloan Kettering
+TCGA-DX-A6BG	TCGA-DX-A6BG-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	DX	Retroperitoneum	2	Primary	0.3012	0.04	Matched	0.533333333	Memorial Sloan Kettering
+TCGA-DX-A6BH	TCGA-DX-A6BH-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	DX	Pelvis	1	Primary	0.2992	0.04	Matched	0.433333333	Memorial Sloan Kettering
+TCGA-DX-A6BK	TCGA-DX-A6BK-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	DX	Retroperitoneum	5	Primary	0.2867	0	Matched	1.7	Memorial Sloan Kettering
+TCGA-DX-A6YQ	TCGA-DX-A6YQ-01	MFS	Sarcoma	Myxofibrosarcoma	Myxofibrosarcoma	NA	No	Yes	DX	Lower Extremity	18	Primary	0.3536	0.74	Matched	2.666666667	Memorial Sloan Kettering
+TCGA-DX-A6YR	TCGA-DX-A6YR-01	MFS	Sarcoma	Myxofibrosarcoma	Myxofibrosarcoma	NA	No	Yes	DX	Chest Wall	16	Primary	0.3584	0.6	Matched	2.066666667	Memorial Sloan Kettering
+TCGA-DX-A6YS	TCGA-DX-A6YS-01	MFS	Sarcoma	Myxofibrosarcoma	Myxofibrosarcoma	NA	No	Yes	DX	Lower Extremity	10	Primary	0.353	0.49	Matched	12.9	Memorial Sloan Kettering
+TCGA-DX-A6YT	TCGA-DX-A6YT-01	MFS	Sarcoma	Myxofibrosarcoma	Myxofibrosarcoma	NA	No	Yes	DX	Thigh/Knee	30	Primary	0.3449	0.06	Matched	19.16666667	Memorial Sloan Kettering
+TCGA-DX-A6YU	TCGA-DX-A6YU-01	MFS	Sarcoma	Myxofibrosarcoma	Myxofibrosarcoma	NA	No	Yes	DX	Chest Wall	23	Primary	0.3454	0.02	Matched	1.2	Memorial Sloan Kettering
+TCGA-DX-A6YV	TCGA-DX-A6YV-01	MFS	Sarcoma	Myxofibrosarcoma	Myxofibrosarcoma	NA	No	Yes	DX	Thigh/Knee	22	Primary	0.348	1.31	Matched	39.1	Memorial Sloan Kettering
+TCGA-DX-A6YX	TCGA-DX-A6YX-01	MFS	Sarcoma	Myxofibrosarcoma	Myxofibrosarcoma	NA	No	Yes	DX	Thigh/Knee	24	Primary	0.3383	1.73	Matched	1.466666667	Memorial Sloan Kettering
+TCGA-DX-A6YZ	TCGA-DX-A6YZ-01	MFS	Sarcoma	Myxofibrosarcoma	Myxofibrosarcoma	NA	No	Yes	DX	Thigh/Knee	19	Primary	0.3266	0.07	Matched	2.266666667	Memorial Sloan Kettering
+TCGA-DX-A6Z0	TCGA-DX-A6Z0-01	MFS	Sarcoma	Myxofibrosarcoma	Myxofibrosarcoma	NA	No	Yes	DX	Thigh/Knee	15	Primary	0.3483	1.13	Matched	1.266666667	Memorial Sloan Kettering
+TCGA-DX-A6Z2	TCGA-DX-A6Z2-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	DX	Retroperitoneum	9	Primary	0.3168	0	Matched	2	Memorial Sloan Kettering
+TCGA-DX-A7EF	TCGA-DX-A7EF-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	No	Yes	DX	Thigh/Knee	23	Primary	0.3504	0.34	Matched	1.3	Memorial Sloan Kettering
+TCGA-DX-A7EI	TCGA-DX-A7EI-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	DX	Retroperitoneum	23	Primary	0.3437	0.76	Matched	1.1	Memorial Sloan Kettering
+TCGA-DX-A7EL	TCGA-DX-A7EL-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	DX	Retroperitoneum/Upper Abdominal	3	Primary	0.3316	0.01	Matched	1.3	Memorial Sloan Kettering
+TCGA-DX-A7EM	TCGA-DX-A7EM-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	DX	Retroperitoneum	16	Primary	0.3356	0.22	Matched	1.666666667	Memorial Sloan Kettering
+TCGA-DX-A7EN	TCGA-DX-A7EN-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	Yes	No	DX	Retroperitoneum	6	Primary	0.3154	0.43	Matched	0.833333333	Memorial Sloan Kettering
+TCGA-DX-A7EO	TCGA-DX-A7EO-01	SYNS	Sarcoma	Synovial Sarcoma	Synovial Sarcoma, Biphasic Type	NA	No	Yes	DX	Flank	3	Primary	0.33	0	Matched	0.533333333	Memorial Sloan Kettering
+TCGA-DX-A7EQ	TCGA-DX-A7EQ-01	SYNS	Sarcoma	Synovial Sarcoma	Synovial Sarcoma, Monophasic Type	NA	No	Yes	DX	Thigh/Knee	1	Primary	0.3408	0	Matched	1.133333333	Memorial Sloan Kettering
+TCGA-DX-A7ER	TCGA-DX-A7ER-01	SYNS	Sarcoma	Synovial Sarcoma	Synovial Sarcoma, Monophasic Type	NA	No	Yes	DX	Lung/Pleura	0	Primary	0.3155	0	Matched	1	Memorial Sloan Kettering
+TCGA-DX-A7ES	TCGA-DX-A7ES-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	DX	Retroperitoneum	1	Primary	0.3212	0	Matched	0.966666667	Memorial Sloan Kettering
+TCGA-DX-A7ET	TCGA-DX-A7ET-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	Yes	No	DX	Abdominal Wal	22	Primary	0.3388	0.17	Matched	1.266666667	Memorial Sloan Kettering
+TCGA-DX-A7EU	TCGA-DX-A7EU-01	MFS	Sarcoma	Myxofibrosarcoma	Myxofibrosarcoma	NA	Yes	No	DX	Pelvis		Primary	0.3518	0.29	Matched	2.266666667	Memorial Sloan Kettering
+TCGA-DX-A8BG	TCGA-DX-A8BG-01	MFS	Sarcoma	Myxofibrosarcoma	Myxofibrosarcoma	NA	Yes	No	DX	Thigh/Knee	12	Primary	0.3264	0.02	Matched	2.433333333	Memorial Sloan Kettering
+TCGA-DX-A8BH	TCGA-DX-A8BH-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	Yes	No	DX	Abdominal Wal	20	Primary	0.3347	0	Matched	2	Memorial Sloan Kettering
+TCGA-DX-A8BJ	TCGA-DX-A8BJ-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	No	Yes	DX	Chest Wall	18	Primary	0.3757	3.28	Matched	2.366666667	Memorial Sloan Kettering
+TCGA-DX-A8BK	TCGA-DX-A8BK-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	No	Yes	DX	Thigh/Knee	16	Primary	0.3245	0.08	Matched	0.833333333	Memorial Sloan Kettering
+TCGA-DX-A8BL	TCGA-DX-A8BL-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	No	Yes	DX	Shoulder/Axilla	14	Primary	0.328	0.18	Matched	2.466666667	Memorial Sloan Kettering
+TCGA-DX-A8BM	TCGA-DX-A8BM-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	No	Yes	DX	Thigh/Knee	13	Primary	0.3348	0.43	Matched	2.4	Memorial Sloan Kettering
+TCGA-DX-A8BN	TCGA-DX-A8BN-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	No	Yes	DX	Thigh/Knee	12	Primary	0.3511	0.02	Matched	1.233333333	Memorial Sloan Kettering
+TCGA-DX-A8BO	TCGA-DX-A8BO-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	No	Yes	DX	Lower Leg/Calf	10	Primary	0.3206	0.08	Matched	0.933333333	Memorial Sloan Kettering
+TCGA-DX-A8BP	TCGA-DX-A8BP-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	No	Yes	DX	Thigh/Knee	12	Primary	0.3322	0.01	Matched	19	Memorial Sloan Kettering
+TCGA-DX-A8BR	TCGA-DX-A8BR-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	No	Yes	DX	Thigh/Knee	6	Primary	0.3292	0.14	Matched	1.266666667	Memorial Sloan Kettering
+TCGA-DX-A8BS	TCGA-DX-A8BS-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	No	Yes	DX	Thigh/Knee		Primary			Matched	0	Memorial Sloan Kettering
+TCGA-DX-A8BT	TCGA-DX-A8BT-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	No	Yes	DX	Shoulder/Axilla	8	Primary	0.3586	0.52	Matched	2.4	Memorial Sloan Kettering
+TCGA-DX-A8BU	TCGA-DX-A8BU-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	No	Yes	DX	Thigh/Knee	11	Primary	0.344	0.39	Matched	2.5	Memorial Sloan Kettering
+TCGA-DX-A8BV	TCGA-DX-A8BV-01	MFS	Sarcoma	Myxofibrosarcoma	Myxofibrosarcoma	NA	No	Yes	DX	Retroperitoneum	15	Primary	0.332	0.02	Matched	1.833333333	Memorial Sloan Kettering
+TCGA-DX-A8BX	TCGA-DX-A8BX-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	No	Yes	DX	Retroperitoneum	24	Primary	0.3664	0.48	Matched	2.033333333	Memorial Sloan Kettering
+TCGA-DX-A8BZ	TCGA-DX-A8BZ-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	Yes	No	DX	Buttock	7	Primary	0.335	0.02	Matched	1.266666667	Memorial Sloan Kettering
+TCGA-DX-AATS	TCGA-DX-AATS-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	No	Yes	DX	Retroperitoneum	21	Primary	0.3658	2.15	Matched	2.733333333	Memorial Sloan Kettering
+TCGA-DX-AB2E	TCGA-DX-AB2E-01	MFS	Sarcoma	Myxofibrosarcoma	Myxofibrosarcoma	NA	Yes	No	DX	Shoulder/Axilla	28	Primary	0.3143	0.39	Matched	25.73333333	Memorial Sloan Kettering
+TCGA-DX-AB2F	TCGA-DX-AB2F-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	Yes	No	DX	Retroperitoneum	9	Primary	0.3465	0.1	Matched	1.233333333	Memorial Sloan Kettering
+TCGA-DX-AB2G	TCGA-DX-AB2G-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	Yes	No	DX	Retroperitoneum		Primary	0.3118	0.06	Matched	1.1	Memorial Sloan Kettering
+TCGA-DX-AB2H	TCGA-DX-AB2H-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	DX	Retroperitoneum	2	Primary	0.3206	0.44	Matched	1.4	Memorial Sloan Kettering
+TCGA-DX-AB2J	TCGA-DX-AB2J-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	No	Yes	DX	Pelvis	5	Primary	0.349	0	Matched	1	Memorial Sloan Kettering
+TCGA-DX-AB2L	TCGA-DX-AB2L-01	MFS	Sarcoma	Myxofibrosarcoma	Myxofibrosarcoma	NA	No	Yes	DX	Thigh/Knee		Primary	0.3283	0	Matched	0.466666667	Memorial Sloan Kettering
+TCGA-DX-AB2O	TCGA-DX-AB2O-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	No	Yes	DX	Lower Leg/Calf	19	Primary	0.3437	0.65	Matched	2.166666667	Memorial Sloan Kettering
+TCGA-DX-AB2P	TCGA-DX-AB2P-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	No	Yes	DX	Thigh/Knee	12	Primary	0.3271	0.16	Matched	1.366666667	Memorial Sloan Kettering
+TCGA-DX-AB2Q	TCGA-DX-AB2Q-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	No	Yes	DX	Lower Leg/Calf	19	Primary	0.3325	1.01	Matched	2.5	Memorial Sloan Kettering
+TCGA-DX-AB2S	TCGA-DX-AB2S-01	MFS	Sarcoma	Myxofibrosarcoma	Myxofibrosarcoma	NA	No	Yes	DX	Back		Primary	0.3088	0.02	Matched	0.466666667	Memorial Sloan Kettering
+TCGA-DX-AB2T	TCGA-DX-AB2T-01	MFS	Sarcoma	Myxofibrosarcoma	Myxofibrosarcoma	NA	No	Yes	DX	Thigh/Knee	14	Primary	0.3451	0.25	Matched	1.933333333	Memorial Sloan Kettering
+TCGA-DX-AB2V	TCGA-DX-AB2V-01	MFS	Sarcoma	Myxofibrosarcoma	Myxofibrosarcoma	NA	No	Yes	DX	Back	21	Primary	0.327	2.85	Matched	2.533333333	Memorial Sloan Kettering
+TCGA-DX-AB2W	TCGA-DX-AB2W-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	No	Yes	DX	Thigh/Knee	17	Primary	0.3287	0.31	Matched	4.433333333	Memorial Sloan Kettering
+TCGA-DX-AB2X	TCGA-DX-AB2X-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	No	Yes	DX	Lower Leg/Calf	27	Primary	0.3598	1.15	Matched	1.4	Memorial Sloan Kettering
+TCGA-DX-AB2Z	TCGA-DX-AB2Z-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	No	Yes	DX	Thigh/Knee	14	Primary	0.3431	0.01	Matched	2.3	Memorial Sloan Kettering
+TCGA-DX-AB30	TCGA-DX-AB30-01	MFS	Sarcoma	Myxofibrosarcoma	Myxofibrosarcoma	NA	No	Yes	DX	Thigh/Knee	4	Primary	0.3786	4.78	Matched	0.466666667	Memorial Sloan Kettering
+TCGA-DX-AB32	TCGA-DX-AB32-01	MFS	Sarcoma	Myxofibrosarcoma	Myxofibrosarcoma	NA	No	Yes	DX	Chest Wall	10	Primary	0.3491	0.67	Matched	8.733333333	Memorial Sloan Kettering
+TCGA-DX-AB35	TCGA-DX-AB35-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	DX	Retroperitoneum	20	Primary	0.3453	0.22	Matched	1.533333333	Memorial Sloan Kettering
+TCGA-DX-AB36	TCGA-DX-AB36-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	DX	Chest Wall	2	Primary	0.3266	0.07	Matched	0.933333333	Memorial Sloan Kettering
+TCGA-DX-AB37	TCGA-DX-AB37-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	DX	Thigh/Knee	3	Primary	0.3145	0.02	Matched	1.6	Memorial Sloan Kettering
+TCGA-DX-AB3A	TCGA-DX-AB3A-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	DX	Retroperitoneum	5	Primary	0.3234	0.16	Matched	1.3	Memorial Sloan Kettering
+TCGA-DX-AB3B	TCGA-DX-AB3B-01	SYNS	Sarcoma	Synovial Sarcoma	Synovial Sarcoma, Monophasic Type	NA	No	Yes	DX	Foot/Ankle	2	Primary	0.3192	0.12	Matched	0.933333333	Memorial Sloan Kettering
+TCGA-DX-AB3C	TCGA-DX-AB3C-01	SYNS	Sarcoma	Synovial Sarcoma	Synovial Sarcoma, Monophasic Type	NA	No	Yes	DX	Thigh/Knee	4	Primary	0.3275	0.04	Matched	0.7	Memorial Sloan Kettering
+TCGA-FX-A2QS	TCGA-FX-A2QS-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	Yes	No	FX	Retroperitoneum/Upper Abdominal	13	Primary	0.3061	0.34	Matched	3.5	International Genomics Consortium
+TCGA-FX-A3NJ	TCGA-FX-A3NJ-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	Yes	No	FX	Kidney	1	Primary	0.2834	0.01	Matched	0.533333333	International Genomics Consortium
+TCGA-FX-A3NK	TCGA-FX-A3NK-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	Yes	No	FX	Gastric	5	Primary	0.3004	0.2	Matched	0.933333333	International Genomics Consortium
+TCGA-FX-A3RE	TCGA-FX-A3RE-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	Yes	No	FX	Ovary	11	Primary	0.3013	0.01	Matched	3.5	International Genomics Consortium
+TCGA-FX-A3TO	TCGA-FX-A3TO-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic Sarcoma (UPS), Undifferentiated	NA	Yes	No	FX	Retroperitoneum	19	Primary	0.3173	0.48	Matched	1.8	International Genomics Consortium
+TCGA-FX-A48G	TCGA-FX-A48G-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	Yes	No	FX	Uterus	6	Primary	0.2876	0.22	Matched	1.9	International Genomics Consortium
+TCGA-FX-A76Y	TCGA-FX-A76Y-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	Yes	No	FX	Uterus	1	Primary	0.3329	0.05	Matched	1.033333333	International Genomics Consortium
+TCGA-FX-A8OO	TCGA-FX-A8OO-01	SYNS	Sarcoma	Synovial Sarcoma	Sarcoma, Synovial, Poorly Differentiated	NA	Yes	No	FX	Lung/Pleura	1	Primary	0.3296	0	Matched	1.033333333	International Genomics Consortium
+TCGA-HB-A2OT	TCGA-HB-A2OT-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic Sarcoma (UPS), Undifferentiated	NA	No	Yes	HB	Thigh/Knee	15	Primary	0.304	0.03	Matched	2.066666667	University of North Carolina
+TCGA-HB-A3L4	TCGA-HB-A3L4-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	HB	Cervix|Uterus	5	Primary	0.2957	0.36	Matched	0.933333333	University of North Carolina
+TCGA-HB-A3YV	TCGA-HB-A3YV-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic Sarcoma (UPS), Undifferentiated	NA	Yes	No	HB	Kidney	13	Primary	0.3012	0.38	Matched	1.633333333	University of North Carolina
+TCGA-HB-A43Z	TCGA-HB-A43Z-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	Yes	No	HB	Uterus	17	Primary	0.3145	1.17	Matched	1.866666667	University of North Carolina
+TCGA-HB-A5W3	TCGA-HB-A5W3-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	Yes	No	HB	Kidney	6	Primary	0.2933	0.13	Matched	0.9	University of North Carolina
+TCGA-HS-A5N7	TCGA-HS-A5N7-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	HS	Retroperitoneum	9	Primary	0.3038	0.01	Matched	0	Ontario Institute for Cancer Research (OICR)
+TCGA-HS-A5N8	TCGA-HS-A5N8-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	HS	Uterus	15	Primary	0.3088	0.17	Matched	0	Ontario Institute for Cancer Research (OICR)
+TCGA-HS-A5NA	TCGA-HS-A5NA-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	HS	Uterus		Primary			Matched	0	Ontario Institute for Cancer Research (OICR)
+TCGA-IE-A3OV	TCGA-IE-A3OV-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	IE	Thigh/Knee	17	Primary	0.3071	0.15	Matched	1.066666667	ABS - IUPUI
+TCGA-IE-A4EH	TCGA-IE-A4EH-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	Yes	No	IE	Uterus	7	Primary	0.2937	0.21	Matched	0.866666667	ABS - IUPUI
+TCGA-IE-A4EI	TCGA-IE-A4EI-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	Yes	No	IE	Thigh/Knee	17	Primary	0.3022	0.85	Matched	0.766666667	ABS - IUPUI
+TCGA-IE-A4EJ	TCGA-IE-A4EJ-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic Sarcoma (UPS), Undifferentiated	NA	Yes	No	IE	Thigh/Knee	20	Primary	0.2881	0.09	Matched	1.466666667	ABS - IUPUI
+TCGA-IE-A4EK	TCGA-IE-A4EK-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	Yes	No	IE	Kidney	2	Primary	0.2821	0.13	Matched	0	ABS - IUPUI
+TCGA-IE-A6BZ	TCGA-IE-A6BZ-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic Sarcoma (UPS), Undifferentiated	NA	Yes	No	IE	Buttock	25	Primary	0.3092	1.24	Matched	1.366666667	ABS - IUPUI
+TCGA-IF-A3RQ	TCGA-IF-A3RQ-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	IF	Intra-Abdominal|Pelvis|Retroperitoneum		Primary		7.1	Matched	0	University of Texas MD Anderson Cancer Center
+TCGA-IF-A4AJ	TCGA-IF-A4AJ-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	IF	Lower Leg/Calf	25	Primary	0.3004	0.33	Matched	1.466666667	University of Texas MD Anderson Cancer Center
+TCGA-IS-A3K6	TCGA-IS-A3K6-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	IS	Uterus	1	Primary	0.2808	0.04	Matched	1.1	Memorial Sloan Kettering
+TCGA-IS-A3K7	TCGA-IS-A3K7-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	IS	Uterus	15	Primary	0.3055	0.09	Matched	3.5	Memorial Sloan Kettering
+TCGA-IS-A3K8	TCGA-IS-A3K8-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	IS	Uterus	3	Primary	0.2879	0.01	Matched	0.433333333	Memorial Sloan Kettering
+TCGA-IS-A3KA	TCGA-IS-A3KA-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	IS	Uterus	16	Primary	0.3061	0.33	Matched	1.833333333	Memorial Sloan Kettering
+TCGA-IW-A3M4	TCGA-IW-A3M4-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	IW	Uterus	6	Primary	0.2928	0.03	Matched	0.766666667	Cedars Sinai
+TCGA-IW-A3M5	TCGA-IW-A3M5-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	IW	Uterus	20	Primary	0.3075	0.64	Matched	1.333333333	Cedars Sinai
+TCGA-IW-A3M6	TCGA-IW-A3M6-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	IW	Uterus	8	Primary	0.3048	0.04	Matched	1.7	Cedars Sinai
+TCGA-JV-A5VE	TCGA-JV-A5VE-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	Yes	No	JV	Pelvis|Uterus	8	Primary	0.3077	0.06	Matched	1.333333333	BLN - Baylor
+TCGA-JV-A5VF	TCGA-JV-A5VF-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	Yes	No	JV	Pelvis|Uterus	22	Primary	0.327	0.67	Matched	1	BLN - Baylor
+TCGA-JV-A75J	TCGA-JV-A75J-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	Yes	No	JV	Uterus	6	Primary	0.3369	0.57	Matched	0.9	BLN - Baylor
+TCGA-K1-A3PN	TCGA-K1-A3PN-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	Yes	No	K1	Uterus	3	Primary	0.297	0.09	Matched	1.166666667	University of Pittsburgh
+TCGA-K1-A3PO	TCGA-K1-A3PO-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	Yes	No	K1	Bladder	1	Primary	0.2938	0	Matched	0	University of Pittsburgh
+TCGA-K1-A42W	TCGA-K1-A42W-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	Yes	No	K1	Pancreas	22	Primary	0.3187	0.44	Matched	0	University of Pittsburgh
+TCGA-K1-A42X	TCGA-K1-A42X-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	Yes	No	K1	Uterus	4	Primary	0.2745	0.21	Matched	0	University of Pittsburgh
+TCGA-K1-A6RT	TCGA-K1-A6RT-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	Yes	No	K1	Thigh/Knee		Primary	0.3359	0	Matched	1.766666667	University of Pittsburgh
+TCGA-K1-A6RU	TCGA-K1-A6RU-01	MFS	Sarcoma	Myxofibrosarcoma	Myxofibrosarcoma	NA	Yes	No	K1	Thigh/Knee	13	Primary	0.3267	0	Matched	0.866666667	University of Pittsburgh
+TCGA-K1-A6RV	TCGA-K1-A6RV-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	Yes	No	K1	Thigh/Knee	16	Primary	0.3388	0.43	Matched	2.233333333	University of Pittsburgh
+TCGA-KD-A5QS	TCGA-KD-A5QS-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	KD	Uterus	14	Primary	0.3162	0.65	Matched	2.4	Mount Sinai School of Medicine
+TCGA-KD-A5QT	TCGA-KD-A5QT-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	KD	Cervix|Uterus	4	Primary	0.3051	0.1	Matched	1.033333333	Mount Sinai School of Medicine
+TCGA-KD-A5QU	TCGA-KD-A5QU-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	KD	Gynecological|Uterus	16	Primary	0.3292	0.43	Matched	2.1	Mount Sinai School of Medicine
+TCGA-KF-A41W	TCGA-KF-A41W-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	Yes	No	KF	Uterus	21	Primary	0.3066	0.29	Matched	2.866666667	Christiana Healthcare
+TCGA-LI-A67I	TCGA-LI-A67I-01	MFS	Sarcoma	Myxofibrosarcoma	Myxofibrosarcoma	NA	Yes	No	LI	Thigh/Knee	13	Primary	0.338	2.37	Matched	1.5	Hartford Hospital
+TCGA-LI-A9QH	TCGA-LI-A9QH-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	Yes	No	LI	Lower Leg/Calf	15	Primary	0.3564	0.7	Matched	2.966666667	Hartford Hospital
+TCGA-MB-A5Y8	TCGA-MB-A5Y8-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic Sarcoma (UPS), Undifferentiated	NA	Yes	No	MB	Lower Leg/Calf	14	Primary	0.3274	0.02	Matched	0.8	University of Minnesota
+TCGA-MB-A5Y9	TCGA-MB-A5Y9-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic Sarcoma (UPS), Undifferentiated	NA	Yes	No	MB	Lower Leg/Calf	9	Primary	0.2908	0	Matched	1.033333333	University of Minnesota
+TCGA-MB-A5YA	TCGA-MB-A5YA-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	Yes	No	MB	Colon	2	Primary	0.2796	0	Matched	0.933333333	University of Minnesota
+TCGA-MB-A8JK	TCGA-MB-A8JK-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	Yes	No	MB	Thigh/Knee	16	Primary	0.339	0.11	Matched	1.066666667	University of Minnesota
+TCGA-MB-A8JL	TCGA-MB-A8JL-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	Yes	No	MB	Breast	7	Primary	0.3277	0.16	Matched	1.133333333	University of Minnesota
+TCGA-MJ-A68H	TCGA-MJ-A68H-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	MJ	Lower Abdomen/Pelvis	19	Primary	0.315	0.31	Matched	1.4	BLN - Baylor
+TCGA-MJ-A68J	TCGA-MJ-A68J-01	MFS	Sarcoma	Myxofibrosarcoma	Myxofibrosarcoma	NA	No	Yes	MJ	Lower Leg/Calf	2	Primary	0.2878	0	Matched	0.3	BLN - Baylor
+TCGA-MJ-A850	TCGA-MJ-A850-01	SYNS	Sarcoma	Synovial Sarcoma	Synovial Sarcoma, Monophasic Type	NA	No	Yes	MJ	Head and Neck|Neck	0	Primary	0.3061	0	Matched	0.566666667	BLN - Baylor
+TCGA-MO-A47P	TCGA-MO-A47P-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	Yes	No	MO	Kidney	0	Primary	0.2777	0	Matched	0.4	ILSBio
+TCGA-MO-A47R	TCGA-MO-A47R-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	Yes	No	MO	Intra-Abdominal	24	Primary	0.3023	0.1	Matched	1.1	ILSBio
+TCGA-N1-A6IA	TCGA-N1-A6IA-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	N1	Uterus	20	Primary	0.3296	0.19	Matched	1.1	Montefiore Medical Center
+TCGA-PC-A5DK	TCGA-PC-A5DK-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	PC	Retroperitoneum	2	Primary	0.3087	0	Matched	0.566666667	Fox Chase
+TCGA-PC-A5DL	TCGA-PC-A5DL-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	PC	Retroperitoneum	23	Primary	0.3129	0	Matched	0	Fox Chase
+TCGA-PC-A5DN	TCGA-PC-A5DN-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	PC	Retroperitoneum	1	Primary	0.3097	0.03	Matched	1.7	Fox Chase
+TCGA-PC-A5DO	TCGA-PC-A5DO-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	PC	Retroperitoneum	6	Primary	0.332	0.35	Matched	0	Fox Chase
+TCGA-QC-A6FX	TCGA-QC-A6FX-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	Yes	No	QC	Back	9	Primary	0.365	1.34	Matched	1.3	Emory University
+TCGA-QC-A7B5	TCGA-QC-A7B5-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	No	Yes	QC	Head	14	Primary	0.3317	0.03	Matched	58.93333333	Emory University
+TCGA-QC-AA9N	TCGA-QC-AA9N-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic Sarcoma (UPS), Undifferentiated	NA	Yes	No	QC	Buttock	6	Primary	0.3296	0.37	Matched	1.233333333	Emory University
+TCGA-QQ-A5V2	TCGA-QQ-A5V2-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Giant Cell MFH, Undifferentiated Pleomorphic Sarcoma	NA	No	Yes	QQ	Pelvis	0	Primary	0.3319	0	Matched	0.6	Roswell Park
+TCGA-QQ-A5V9	TCGA-QQ-A5V9-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic Sarcoma (UPS), Undifferentiated	NA	No	Yes	QQ	Retroperitoneum	28	Primary	0.3521	0.43	Matched	2.066666667	Roswell Park
+TCGA-QQ-A5VA	TCGA-QQ-A5VA-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	QQ	Retroperitoneum	7	Primary	0.3341	0.07	Matched	1.566666667	Roswell Park
+TCGA-QQ-A5VB	TCGA-QQ-A5VB-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	QQ	Groin	18	Primary	0.3577	0.64	Matched	1.7	Roswell Park
+TCGA-QQ-A5VC	TCGA-QQ-A5VC-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	QQ	Thigh/Knee	21	Primary	0.3741	2.3	Matched	1.933333333	Roswell Park
+TCGA-QQ-A5VD	TCGA-QQ-A5VD-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	QQ	Foot/Ankle	4	Primary	0.3357	0	Matched	11.43333333	Roswell Park
+TCGA-QQ-A8VB	TCGA-QQ-A8VB-01	MPNST	Sarcoma	Malignant Peripheral Nerve Sheath Tumor	Malignant Peripheral Nerve Sheath Tumors (MPNST)	NA	No	Yes	QQ	Buttock	20	Primary	0.338	0.22	Matched	2.266666667	Roswell Park
+TCGA-QQ-A8VD	TCGA-QQ-A8VD-01	DES	Sarcoma	Desmoid/Aggressive Fibromatosis	Desmoid Tumor	NA	No	Yes	QQ	Intra-Abdominal|Small Intestine	0	Primary	0.3204	0	Matched	0.433333333	Roswell Park
+TCGA-QQ-A8VF	TCGA-QQ-A8VF-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	QQ	Lower Leg/Calf	31	Primary	0.6214	13.14	Matched	25.13333333	Roswell Park
+TCGA-QQ-A8VG	TCGA-QQ-A8VG-01	MPNST	Sarcoma	Malignant Peripheral Nerve Sheath Tumor	Malignant Peripheral Nerve Sheath Tumors (MPNST)	NA	No	Yes	QQ	Back	1	Primary	0.328	0.01	Matched	11.63333333	Roswell Park
+TCGA-QQ-A8VH	TCGA-QQ-A8VH-01	MPNST	Sarcoma	Malignant Peripheral Nerve Sheath Tumor	Malignant Peripheral Nerve Sheath Tumors (MPNST)	NA	No	Yes	QQ	Chest	5	Primary	0.3298	0.49	Matched	1.666666667	Roswell Park
+TCGA-RN-A68Q	TCGA-RN-A68Q-01	MPNST	Sarcoma	Malignant Peripheral Nerve Sheath Tumor	Malignant Peripheral Nerve Sheath Tumors (MPNST)	NA	No	Yes	RN	Head and Neck	0	Primary	0.3023	0	Matched	0.5	St. Joseph's Hospital AZ
+TCGA-RN-AAAQ	TCGA-RN-AAAQ-01	MPNST	Sarcoma	Malignant Peripheral Nerve Sheath Tumor	Malignant Peripheral Nerve Sheath Tumors (MPNST)	NA	No	Yes	RN	Shoulder/Axilla	27	Primary	0.3166	0.02	Matched	1.433333333	St. Joseph's Hospital AZ
+TCGA-SG-A6Z4	TCGA-SG-A6Z4-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic MFH|Undifferentiated Pleomorphic Sarcoma	NA	Yes	No	SG	Thigh/Knee	19	Primary	0.3465	0.44	Matched	1.5	Cleveland Clinic Foundation
+TCGA-SG-A6Z7	TCGA-SG-A6Z7-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	SG	Kidney|Liver|Retroperitoneum/Upper Abdominal	20	Primary	0.3336	0.48	Matched	1.7	Cleveland Clinic Foundation
+TCGA-SG-A849	TCGA-SG-A849-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic Sarcoma (UPS), Undifferentiated	NA	Yes	No	SG	Upper Arm/Elbow	23	Primary	0.3227	0	Matched	1.533333333	Cleveland Clinic Foundation
+TCGA-SI-A71O	TCGA-SI-A71O-01	MPNST	Sarcoma	Malignant Peripheral Nerve Sheath Tumor	Malignant Peripheral Nerve Sheath Tumors (MPNST)	NA	No	Yes	SI	Lower Extremity	7	Primary	0.3537	0.42	Matched	1.233333333	Washington University St. Louis
+TCGA-SI-A71P	TCGA-SI-A71P-01	MPNST	Sarcoma	Malignant Peripheral Nerve Sheath Tumor	Malignant Peripheral Nerve Sheath Tumors (MPNST)	NA	No	Yes	SI	NA	23	Primary	0.3324	0	Matched	1.166666667	Washington University St. Louis
+TCGA-SI-A71Q	TCGA-SI-A71Q-01	MPNST	Sarcoma	Malignant Peripheral Nerve Sheath Tumor	Malignant Peripheral Nerve Sheath Tumors (MPNST)	NA	No	Yes	SI	Chest Wall	20	Primary	0.347	1.15	Matched	1	Washington University St. Louis
+TCGA-SI-AA8B	TCGA-SI-AA8B-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic Sarcoma (UPS), Undifferentiated	NA	No	Yes	SI	Thigh/Knee	20	Primary	0.3624	0.45	Matched	1.5	Washington University St. Louis
+TCGA-SI-AA8C	TCGA-SI-AA8C-01	MPNST	Sarcoma	Malignant Peripheral Nerve Sheath Tumor	Malignant Peripheral Nerve Sheath Tumors (MPNST)	NA	No	Yes	SI	Thigh/Knee	6	Primary	0.3386	0.01	Matched	0.4	Washington University St. Louis
+TCGA-UE-A6QT	TCGA-UE-A6QT-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic Sarcoma (UPS), Undifferentiated	NA	Yes	No	UE	Chest Wall|Head	8	Primary	0.3351	0	Matched	0.466666667	Asterand
+TCGA-UE-A6QU	TCGA-UE-A6QU-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic Sarcoma (UPS), Undifferentiated	NA	Yes	No	UE	Shoulder/Axilla	15	Primary	0.3307	0.13	Matched	1.666666667	Asterand
+TCGA-VT-A80G	TCGA-VT-A80G-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic Sarcoma (UPS), Undifferentiated	NA	Yes	No	VT	Lower Extremity	14	Primary	0.3359	1.21	Matched	2.3	Vanderbilt
+TCGA-VT-A80J	TCGA-VT-A80J-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic Sarcoma (UPS), Undifferentiated	NA	Yes	No	VT	Lower Leg/Calf	13	Primary	0.3305	0.8	Matched	1.4	Vanderbilt
+TCGA-VT-AB3D	TCGA-VT-AB3D-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic Sarcoma (UPS), Undifferentiated	NA	Yes	No	VT	Upper Arm/Elbow	6	Primary	0.3292	0	Matched	1.6	Vanderbilt
+TCGA-WK-A8XO	TCGA-WK-A8XO-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	WK	Retroperitoneum|Retroperitoneum/Upper Abdominal|Small Intestine	7	Primary	0.3082	0.08	Matched	1.366666667	Brigham and Women's Hospital
+TCGA-WK-A8XQ	TCGA-WK-A8XQ-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	No	Yes	WK	Intra-Abdominal|Retroperitoneum/Upper Abdominal		Primary	0.3256	0	Matched	0.866666667	Brigham and Women's Hospital
+TCGA-WK-A8XS	TCGA-WK-A8XS-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	WK	Gastric	23	Primary	0.3397	0.33	Matched	1.566666667	Brigham and Women's Hospital
+TCGA-WK-A8XT	TCGA-WK-A8XT-01	SYNS	Sarcoma	Synovial Sarcoma	Synovial Sarcoma, Monophasic Type	NA	No	Yes	WK	Kidney	2	Primary	0.3212	0.02	Matched	1.533333333	Brigham and Women's Hospital
+TCGA-WK-A8XX	TCGA-WK-A8XX-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	WK	Retroperitoneum|Retroperitoneum/Upper Abdominal	19	Primary	0.3406	0	Matched	1.666666667	Brigham and Women's Hospital
+TCGA-WK-A8XY	TCGA-WK-A8XY-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	WK	Retroperitoneum/Upper Abdominal|Small Intestine	11	Primary	0.3462	0.35	Matched	1.633333333	Brigham and Women's Hospital
+TCGA-WK-A8XZ	TCGA-WK-A8XZ-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	WK	Retroperitoneum|Retroperitoneum/Upper Abdominal		Primary	0.3406	0.05	Matched	1.1	Brigham and Women's Hospital
+TCGA-WK-A8Y0	TCGA-WK-A8Y0-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic Sarcoma (UPS), Undifferentiated	NA	No	Yes	WK	Chest Wall	28	Primary	0.322	0.29	Matched	1.366666667	Brigham and Women's Hospital
+TCGA-WP-A9GB	TCGA-WP-A9GB-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	WP	Uterus	17	Primary	0.3411	0.37	Matched	4.533333333	University of Kansas
+TCGA-X2-A95T	TCGA-X2-A95T-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	X2	Uterus	6	Primary	0.335	0.12	Matched	1.866666667	University of Washington
+TCGA-X6-A7W8	TCGA-X6-A7W8-01	MFS	Sarcoma	Myxofibrosarcoma	Myxofibrosarcoma	NA	No	Yes	X6	Thigh/Knee	11	Primary	0.3315	0.79	Matched	1.8	University of Iowa
+TCGA-X6-A7WA	TCGA-X6-A7WA-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	X6	Chest	3	Primary	0.3372	0.01	Matched	15.63333333	University of Iowa
+TCGA-X6-A7WB	TCGA-X6-A7WB-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	X6	Uterus	11	Primary	0.3601	0.52	Matched	11.63333333	University of Iowa
+TCGA-X6-A7WC	TCGA-X6-A7WC-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	X6	Thigh/Knee	13	Primary	0.3335	0.19	Matched	2.533333333	University of Iowa
+TCGA-X6-A7WD	TCGA-X6-A7WD-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	X6	Lower Leg/Calf	1	Primary	0.331	0.18	Matched	1.1	University of Iowa
+TCGA-X6-A8C2	TCGA-X6-A8C2-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic Sarcoma (UPS), Undifferentiated	NA	No	Yes	X6	Lower Leg/Calf	16	Primary	0.3464	0.42	Matched	2.5	University of Iowa
+TCGA-X6-A8C3	TCGA-X6-A8C3-01	MFS	Sarcoma	Myxofibrosarcoma	Myxofibrosarcoma	NA	No	Yes	X6	Lower Leg/Calf	18	Primary	0.3264	0.18	Matched	1.7	University of Iowa
+TCGA-X6-A8C4	TCGA-X6-A8C4-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic Sarcoma (UPS), Undifferentiated	NA	No	Yes	X6	Lower Leg/Calf	17	Primary	0.3434	1.16	Matched	2.133333333	University of Iowa
+TCGA-X6-A8C5	TCGA-X6-A8C5-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	X6	Small Intestine	4	Primary	0.3302	0.01	Matched	2	University of Iowa
+TCGA-X6-A8C6	TCGA-X6-A8C6-01	MFS	Sarcoma	Myxofibrosarcoma	Myxofibrosarcoma	NA	No	Yes	X6	Thigh/Knee	21	Primary	0.3145	0.15	Matched	2.133333333	University of Iowa
+TCGA-X6-A8C7	TCGA-X6-A8C7-01	SYNS	Sarcoma	Synovial Sarcoma	Synovial Sarcoma, Biphasic Type	NA	No	Yes	X6	Foot/Ankle	1	Primary	0.3184	0	Matched	0.5	University of Iowa
+TCGA-X9-A971	TCGA-X9-A971-01	LMS	Sarcoma	Leiomyosarcoma	Leiomyosarcoma (LMS)	NA	No	Yes	X9	Shoulder/Axilla	7	Primary	0.3464	0.49	Matched	1.566666667	University of California, Davis
+TCGA-X9-A973	TCGA-X9-A973-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic Sarcoma (UPS), Undifferentiated	NA	No	Yes	X9	Pelvis	6	Primary	0.3596	1.01	Matched	1.3	University of California, Davis
+TCGA-Z4-A8JB	TCGA-Z4-A8JB-01	DES	Sarcoma	Desmoid/Aggressive Fibromatosis	Desmoid Tumor	NA	Yes	No	Z4	Retroperitoneum	0	Primary	0.3276	0	Matched	0.733333333	Cureline
+TCGA-Z4-A9VC	TCGA-Z4-A9VC-01	DDLS	Sarcoma	Dedifferentiated Liposarcoma	Dedifferentiated Liposarcoma	NA	Yes	No	Z4	Thigh/Knee	0	Primary	0.3372	0	Matched	0.933333333	Cureline
+TCGA-Z4-AAPF	TCGA-Z4-AAPF-01	SYNS	Sarcoma	Synovial Sarcoma	Sarcoma, Synovial, Poorly Differentiated	NA	Yes	No	Z4	Upper Arm/Elbow	11	Primary	0.3138	0.02	Matched	0.633333333	Cureline
+TCGA-Z4-AAPG	TCGA-Z4-AAPG-01	MFH	Sarcoma	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	Pleomorphic Sarcoma (UPS), Undifferentiated	NA	Yes	No	Z4	Retroperitoneum	18	Primary	0.3354	0.9	Matched	1.333333333	Cureline
