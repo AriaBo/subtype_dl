@@ -121,7 +121,7 @@ print(type(y_data_tensor))
 
 #%%
 
-x_train, x_test, y_train, y_test = train_test_split(x_data, y_data, test_size=0.30, shuffle=True)
+x_train, x_test, y_train, y_test = train_test_split(x_data_tensor, y_data_tensor, test_size=0.30, shuffle=True)
 
 print('x_train:', x_train.shape)
 print('y_train:', y_train.shape)
@@ -153,6 +153,7 @@ class SubtypeModel(nn.Module):
         self.linear5 = nn.Linear(32, 1)
         self.relu = nn.ReLU()
         self.dropout = nn.Dropout(p=0.25)
+  
     def forward(self, x):
         return self.linear5(self.relu(self.linear4(self.dropout(self.relu(self.linear3(self.dropout(self.relu(self.linear2(self.dropout(self.relu(self.linear1(x))))))))))))
 
@@ -166,6 +167,7 @@ learning_rate = 0.003
 loss_fn = nn.BCEWithLogitsLoss()
 optimizer = torch.optim.SGD(params=model.parameters(), lr=learning_rate)
 
+
 #define accuracy
 def accuracy_fn(y_true, y_pred):
     correct = torch.eq(y_true, y_pred).sum().item()
@@ -176,3 +178,55 @@ def accuracy_fn(y_true, y_pred):
 ###############################
 #TRAIN THE MODEL
 ###############################
+# Number of epochs
+epochs = 100
+
+# Send data to the device
+x_train, x_test = x_train.to(device), x_test.to(device)
+y_train, y_test = y_train.to(device), y_test.to(device)
+
+# Empty loss lists to track values
+epoch_count, train_loss_values, valid_loss_values = [], [], []
+
+# Loop through the data
+for epoch in range(epochs):
+
+    # Put the model in training mode
+    model.train()
+
+    y_logits = model(x_train).squeeze() # forward pass to get predictions; squeeze the logits into the same shape as the labels
+    y_pred = torch.round(torch.sigmoid(y_logits)) # convert logits into prediction probabilities
+
+    loss = loss_fn(y_logits, y_train) # compute the loss   
+    acc = accuracy_fn(y_train.int(), y_pred) # calculate the accuracy; convert the labels to integers
+
+    optimizer.zero_grad() # reset the gradients so they don't accumulate each iteration
+    loss.backward() # backward pass: backpropagate the prediction loss
+    optimizer.step() # gradient descent: adjust the parameters by the gradients collected in the backward pass
+    
+    # Put the model in evaluation mode
+    model.eval() 
+
+    with torch.inference_mode():
+        test_logits = model(x_test).squeeze()
+        test_pred = torch.round(torch.sigmoid(test_logits))    
+
+        test_loss = loss_fn(test_logits, y_test)
+        test_acc = accuracy_fn(y_test.int(), test_pred)    
+    
+    # Print progress a total of 20 times
+    if epoch % int(epochs / 20) == 0:
+        print(f'Epoch: {epoch:4.0f} | Train Loss: {loss:.5f}, Accuracy: {acc:.2f}% | Validation Loss: {test_loss:.5f}, Accuracy: {test_acc:.2f}%')
+
+        epoch_count.append(epoch)
+        train_loss_values.append(loss.detach().numpy())
+        valid_loss_values.append(test_loss.detach().numpy())
+
+# %%
+
+print(f'x_train shape: {x_train.shape}')
+
+from torchsummary import summary
+
+summary(model, input_size=(x_test.shape))
+# %%
