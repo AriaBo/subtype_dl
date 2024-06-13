@@ -187,7 +187,7 @@ def accuracy_fn(y_true, y_pred):
 #TRAIN THE MODEL
 ###############################
 # Number of epochs
-epochs = 1000
+epochs = 100
 
 # Send data to the device
 x_train, x_test = x_train.to(device), x_test.to(device)
