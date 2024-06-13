@@ -90,4 +90,44 @@ rna_filtered = rna.loc[common_sample_ids]
 
 print(sarc_truth_filtered)
 print(rna_filtered)
+
+# %%
+#######################################
+#CONVERT THE LABELS TO A DUMMY VARIABLE
+#######################################
+
+print(rna_filtered.info())
+sarc_truth_filtered.describe(include=object)
+
+# One-hot encoding of labels
+truth_encoded = pd.get_dummies(sarc_truth_filtered, columns=['CANCER_TYPE_DETAILED'])  
+
+# Result
+print(truth_encoded)
+
+# %%
+####################################
+#CONVERT TO TESOR + SPLIT TRAIN AND TEST DATASET
+####################################
+
+x_data = rna_filtered.values.astype(np.float32)  
+x_data_tensor = torch.from_numpy(x_data).to(torch.float32)
+
+y_data = truth_encoded.values.astype(np.float32) 
+y_data_tensor = torch.from_numpy(y_data).to(torch.float32)
+
+print(type(x_data_tensor))
+print(type(y_data_tensor))
+
+#%%
+
+x_train, x_test, y_train, y_test = train_test_split(x_data, y_data, test_size=0.30, shuffle=True)
+
+print('x_train:', x_train.shape)
+print('y_train:', y_train.shape)
+print('x_test:', x_test.shape)
+print('y_test:', y_test.shape)
+
+
+
 # %%
