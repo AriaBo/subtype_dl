@@ -145,12 +145,12 @@ print(device)
 
 class SubtypeModel(nn.Module):
     def __init__(self):
-        super().__init__()
-        self.linear1 = nn.Linear(19, 64)
+        super(SubtypeModel, self).__init__()
+        self.linear1 = nn.Linear(20511, 64)  # Adjusted input size to match x_train
         self.linear2 = nn.Linear(64, 128)
         self.linear3 = nn.Linear(128, 96)
         self.linear4 = nn.Linear(96, 32)
-        self.linear5 = nn.Linear(32, 1)
+        self.linear5 = nn.Linear(32, 5)  # Adjusted output to match the number of classes
         self.relu = nn.ReLU()
         self.dropout = nn.Dropout(p=0.25)
   
@@ -166,6 +166,14 @@ model
 learning_rate = 0.003
 loss_fn = nn.BCEWithLogitsLoss()
 optimizer = torch.optim.SGD(params=model.parameters(), lr=learning_rate)
+
+# Forward pass
+logits = model(x_train)
+print('logits:', logits[:5])
+
+# Logits -> Probabilities b/n 0 and 1 -> Rounded to 0 or 1
+pred_probab = torch.round(torch.sigmoid(logits))
+print('probabilities:', pred_probab[0:5])
 
 
 #define accuracy
@@ -186,7 +194,7 @@ x_train, x_test = x_train.to(device), x_test.to(device)
 y_train, y_test = y_train.to(device), y_test.to(device)
 
 # Empty loss lists to track values
-epoch_count, train_loss_values, valid_loss_values = [], [], []
+epoch_count, train_loss_values, test_loss_values = [], [], []
 
 # Loop through the data
 for epoch in range(epochs):
@@ -219,14 +227,20 @@ for epoch in range(epochs):
         print(f'Epoch: {epoch:4.0f} | Train Loss: {loss:.5f}, Accuracy: {acc:.2f}% | Validation Loss: {test_loss:.5f}, Accuracy: {test_acc:.2f}%')
 
         epoch_count.append(epoch)
-        train_loss_values.append(loss.detach().numpy())
-        valid_loss_values.append(test_loss.detach().numpy())
+        train_loss_values.append(loss.detach().cpu().numpy())
+        test_loss_values.append(test_loss.detach().cpu().numpy())
 
-# %%
+#%%
+####################################
+#PLOT
+####################################
 
-print(f'x_train shape: {x_train.shape}')
+plt.plot(epoch_count, train_loss_values, label='Training Loss')
+plt.plot(epoch_count, test_loss_values, label='Validation Loss')
+plt.title('Training & Validation Loss Curves')
+plt.ylabel('Loss')
+plt.xlabel('Epochs')
+plt.legend()
+plt.show()
 
-from torchsummary import summary
-
-summary(model, input_size=(x_test.shape))
 # %%
