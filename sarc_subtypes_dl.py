@@ -155,3 +155,24 @@ class SubtypeModel(nn.Module):
         self.dropout = nn.Dropout(p=0.25)
     def forward(self, x):
         return self.linear5(self.relu(self.linear4(self.dropout(self.relu(self.linear3(self.dropout(self.relu(self.linear2(self.dropout(self.relu(self.linear1(x))))))))))))
+
+#istantiate the model and move it to gpu
+
+model = SubtypeModel().to(device)
+model
+
+#define hyperparameters 
+learning_rate = 0.003
+loss_fn = nn.BCEWithLogitsLoss()
+optimizer = torch.optim.SGD(params=model.parameters(), lr=learning_rate)
+
+#define accuracy
+def accuracy_fn(y_true, y_pred):
+    correct = torch.eq(y_true, y_pred).sum().item()
+    acc = correct / len(y_pred) * 100
+    return acc
+
+# %%
+###############################
+#TRAIN THE MODEL
+###############################
