@@ -131,3 +131,27 @@ print('y_test:', y_test.shape)
 
 
 # %%
+##############################
+#USE THE GPU
+##############################
+
+device = 'cuda' if torch.cuda.is_available() else print ('error')
+print(device)
+
+# %%
+##########################
+#INITIALISE THE MODEL 
+##########################
+
+class SubtypeModel(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.linear1 = nn.Linear(19, 64)
+        self.linear2 = nn.Linear(64, 128)
+        self.linear3 = nn.Linear(128, 96)
+        self.linear4 = nn.Linear(96, 32)
+        self.linear5 = nn.Linear(32, 1)
+        self.relu = nn.ReLU()
+        self.dropout = nn.Dropout(p=0.25)
+    def forward(self, x):
+        return self.linear5(self.relu(self.linear4(self.dropout(self.relu(self.linear3(self.dropout(self.relu(self.linear2(self.dropout(self.relu(self.linear1(x))))))))))))
