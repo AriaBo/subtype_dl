@@ -187,7 +187,7 @@ def accuracy_fn(y_true, y_pred):
 #TRAIN THE MODEL
 ###############################
 # Number of epochs
-epochs = 100
+epochs = 1000
 
 # Send data to the device
 x_train, x_test = x_train.to(device), x_test.to(device)
@@ -224,7 +224,7 @@ for epoch in range(epochs):
     
     # Print progress a total of 20 times
     if epoch % int(epochs / 20) == 0:
-        print(f'Epoch: {epoch:4.0f} | Train Loss: {loss:.5f}, Accuracy: {acc:.2f}% | Validation Loss: {test_loss:.5f}, Accuracy: {test_acc:.2f}%')
+        print(f'Epoch: {epoch:4.0f} | Train Loss: {loss:.5f}, Accuracy: {acc:.2f}% | Test Loss: {test_loss:.5f}, Accuracy: {test_acc:.2f}%')
 
         epoch_count.append(epoch)
         train_loss_values.append(loss.detach().cpu().numpy())
@@ -236,11 +236,13 @@ for epoch in range(epochs):
 ####################################
 
 plt.plot(epoch_count, train_loss_values, label='Training Loss')
-plt.plot(epoch_count, test_loss_values, label='Validation Loss')
-plt.title('Training & Validation Loss Curves')
+plt.plot(epoch_count, test_loss_values, label='Test Loss')
+plt.title('Training & Test Loss Curves')
 plt.ylabel('Loss')
 plt.xlabel('Epochs')
 plt.legend()
 plt.show()
+
+
 
 # %%
