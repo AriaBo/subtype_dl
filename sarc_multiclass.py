@@ -15,7 +15,6 @@ import pandas as pd
 # %%
 
 #import rna data 
-truth=pd.read_csv("/home/arianna/subtype_dl/truth_encoded.csv", sep='\t')
 rna=pd.read_csv("/home/arianna/subtype_dl/rna_filtered.csv", sep='\t', index_col=0)
 truth_label=pd.read_csv("/home/arianna/subtype_dl/truth_label", sep='\t')
 
@@ -34,11 +33,22 @@ truth_label['CANCER_TYPE_CODE'] = truth_label['CANCER_TYPE_DETAILED'].map(cancer
 # Create a new DataFrame with the same index but with the corresponding number
 truth_coded = truth_label[['CANCER_TYPE_CODE']]
 
-print(truth_coded)
+
+print("truth label")
+print(truth_label)
+
+
 
 y_binarized = label_binarize(truth_coded.CANCER_TYPE_CODE, classes=[0, 1, 2, 3, 4])
-truth_coded= truth_coded.values
+truth_coded = truth_coded.values
+# Flatten truth_coded properly
+truth_coded = truth_coded.flatten()
 
+
+print("truth coded")
+print(truth_coded) #y
+
+print("y binarized")
 print(y_binarized)
 
 print(rna.values)
@@ -108,7 +118,7 @@ class MultiClassModel(nn.Module):
 
 # Define input size and number of classes
 input_size = X_train.shape[1]
-num_classes = len(np.unique(truth_label['CANCER_TYPE_DETAILED']))
+num_classes = len(np.unique(truth_coded))
 
 # Instantiate the model
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -198,6 +208,11 @@ for epoch in range(epochs):
     train_loss_values.append(train_loss)
     test_loss_values.append(test_loss)
 
+#%%
+#############################
+# PLOT
+##############################
+
 # ROC Curve Calculation and Plotting
 all_targets = np.array(all_targets)
 all_outputs = np.array(all_outputs)
@@ -227,5 +242,6 @@ plt.ylabel('True Positive Rate')
 plt.title('Receiver Operating Characteristic to Multi-Class')
 plt.legend(loc="lower right")
 plt.show()
+
 
 # %%
