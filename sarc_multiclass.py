@@ -242,6 +242,6 @@ plt.ylabel('True Positive Rate')
 plt.title('Receiver Operating Characteristic to Multi-Class')
 plt.legend(loc="lower right")
 plt.show()
-
+plt.savefig('/home/arianna/subtype_dl/roc_curve_multiclass.pdf', format='pdf', dpi=300)
 
 # %%
