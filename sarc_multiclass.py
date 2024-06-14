@@ -229,17 +229,32 @@ for i in range(num_classes):
 # Plot all ROC curves
 plt.figure()
 colors = ['aqua', 'darkorange', 'cornflowerblue', 'navy', 'darkred']
-for i, color in zip(range(num_classes), colors):
+
+cancer_type_mapping = {
+    0: 'Dedifferentiated Liposarcoma',
+    1: 'Leiomyosarcoma',
+    2: 'Myxofibrosarcoma',
+    3: 'Undifferentiated Pleomorphic Sarcoma',
+    4: 'Synovial Sarcoma'
+}
+
+for i, color in zip(range(len(cancer_type_mapping)), colors):
     plt.plot(fpr[i], tpr[i], color=color, lw=2,
-             label='ROC curve of class {0} (area = {1:0.2f})'
-             ''.format(i, roc_auc[i]))
+             label='ROC curve of {0} (area = {1:0.2f})'
+             ''.format(cancer_type_mapping[i], roc_auc[i]))
+
+
+#for i, color in zip(range(num_classes), colors):
+#    plt.plot(fpr[i], tpr[i], color=color, lw=2,
+#             label='ROC curve of class {0} (area = {1:0.2f})'
+#             ''.format(i, roc_auc[i]))
 
 plt.plot([0, 1], [0, 1], 'k--', lw=2)
 plt.xlim([0.0, 1.0])
 plt.ylim([0.0, 1.05])
 plt.xlabel('False Positive Rate')
 plt.ylabel('True Positive Rate')
-plt.title('Receiver Operating Characteristic to Multi-Class')
+plt.title('Receiver Operating Characteristic to Multi-Class Sarc Subtypes')
 plt.legend(loc="lower right")
 plt.savefig('/home/arianna/subtype_dl/roc_curve_multiclass.pdf', format='pdf', dpi=300)
 plt.show()
