@@ -73,7 +73,7 @@ train_dataset = TensorDataset(x_train, y_train)
 test_dataset = TensorDataset(x_test, y_test)
 
 # Define batch size
-batch_size = 32
+batch_size = 122
 
 # Create DataLoaders
 train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
@@ -108,7 +108,7 @@ class MultiClassModel(nn.Module):
 
 # Define input size and number of classes
 input_size = X_train.shape[1]
-num_classes = len(np.unique(y))
+num_classes = len(np.unique(truth_label['CANCER_TYPE_DETAILED']))
 
 # Instantiate the model
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -123,5 +123,109 @@ model = MultiClassModel(input_size, num_classes).to(device)
 # Loss function and optimizer
 loss_fn = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
+
+# %%
+###############################
+#TRINING AND EVALUATION LOOP WITH ROC CURVE
+###############################
+
+# Training loop
+epochs = 100
+
+# Lists to store results
+epoch_count = []
+train_loss_values = []
+test_loss_values = []
+
+# Training and evaluation loop
+for epoch in range(epochs):
+
+    # Training mode
+    model.train()
+    train_loss = 0.0
+    correct_train = 0
+    total_train = 0
+
+    for inputs, targets in train_loader:
+        inputs, targets = inputs.to(device), targets.to(device)
+
+        optimizer.zero_grad()
+        outputs = model(inputs)
+        loss = loss_fn(outputs, targets)
+        loss.backward()
+        optimizer.step()
+
+        train_loss += loss.item() * inputs.size(0)
+        _, predicted = torch.max(outputs, 1)
+        correct_train += (predicted == targets).sum().item()
+        total_train += targets.size(0)
+
+    train_loss = train_loss / len(train_loader.dataset)
+    train_accuracy = 100.0 * correct_train / total_train
+
+    # Evaluation mode
+    model.eval()
+    test_loss = 0.0
+    correct_test = 0
+    total_test = 0
+    all_targets = []
+    all_outputs = []
+
+    with torch.no_grad():
+        for inputs, targets in test_loader:
+            inputs, targets = inputs.to(device), targets.to(device)
+
+            outputs = model(inputs)
+            loss = loss_fn(outputs, targets)
+
+            test_loss += loss.item() * inputs.size(0)
+            _, predicted = torch.max(outputs, 1)
+            correct_test += (predicted == targets).sum().item()
+            total_test += targets.size(0)
+            
+            all_targets.extend(targets.cpu().numpy())
+            all_outputs.extend(outputs.cpu().numpy())
+
+    test_loss = test_loss / len(test_loader.dataset)
+    test_accuracy = 100.0 * correct_test / total_test
+
+    # Print progress every 10 epochs
+    if epoch % 10 == 0:
+        print(f'Epoch: {epoch:4} | Train Loss: {train_loss:.4f} | Train Accuracy: {train_accuracy:.2f}% | Validation Loss: {test_loss:.4f} | Validation Accuracy: {test_accuracy:.2f}%')
+
+    # Append values to lists for plotting
+    epoch_count.append(epoch)
+    train_loss_values.append(train_loss)
+    test_loss_values.append(test_loss)
+
+# ROC Curve Calculation and Plotting
+all_targets = np.array(all_targets)
+all_outputs = np.array(all_outputs)
+all_outputs_prob = torch.softmax(torch.tensor(all_outputs), dim=1).numpy()
+
+# Compute ROC curve and ROC area for each class
+fpr = dict()
+tpr = dict()
+roc_auc = dict()
+for i in range(num_classes):
+    fpr[i], tpr[i], _ = roc_curve(y_test_binarized[:, i], all_outputs_prob[:, i])
+    roc_auc[i] = auc(fpr[i], tpr[i])
+
+# Plot all ROC curves
+plt.figure()
+colors = ['aqua', 'darkorange', 'cornflowerblue', 'navy', 'darkred']
+for i, color in zip(range(num_classes), colors):
+    plt.plot(fpr[i], tpr[i], color=color, lw=2,
+             label='ROC curve of class {0} (area = {1:0.2f})'
+             ''.format(i, roc_auc[i]))
+
+plt.plot([0, 1], [0, 1], 'k--', lw=2)
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('Receiver Operating Characteristic to Multi-Class')
+plt.legend(loc="lower right")
+plt.show()
 
 # %%
