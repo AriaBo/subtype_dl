@@ -19,13 +19,18 @@ import numpy as np
 # Generate a synthetic dataset
 X, y = make_classification(n_samples=1000, n_features=20, n_classes=5, n_informative=15, random_state=42)
 print(X)
-
 print(y)
 
 # Binarize the output
 y_binarized = label_binarize(y, classes=[0, 1, 2, 3, 4])
 
 print(y_binarized)
+
+print("types!")
+print(type(X))
+print(type(y))
+print(type(y_binarized))
+
 
 # Split the data into train and test sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
