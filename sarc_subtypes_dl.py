@@ -105,6 +105,10 @@ truth_encoded = pd.get_dummies(sarc_truth_filtered, columns=['CANCER_TYPE_DETAIL
 # Result
 print(truth_encoded)
 
+sarc_truth_filtered.to_csv("/home/arianna/subtype_dl/truth_label", sep='\t')
+truth_encoded.to_csv("/home/arianna/subtype_dl/truth_encoded.csv", sep='\t')
+rna_filtered.to_csv("/home/arianna/subtype_dl/rna_filtered.csv", sep='\t')
+
 # %%
 ####################################
 #CONVERT TO TESOR + SPLIT TRAIN AND TEST DATASET
@@ -116,6 +120,7 @@ x_data_tensor = torch.from_numpy(x_data).to(torch.float32)
 y_data = truth_encoded.values.astype(np.float32) 
 y_data_tensor = torch.from_numpy(y_data).to(torch.float32)
 
+print(x_data)
 print(type(x_data_tensor))
 print(type(y_data_tensor))
 
