@@ -136,7 +136,7 @@ optimizer = optim.Adam(model.parameters(), lr=0.001)
 
 # %%
 ###############################
-#TRINING AND EVALUATION LOOP WITH ROC CURVE
+#TRAINING AND EVALUATION LOOP WITH ROC CURVE
 ###############################
 
 # Training loop
@@ -210,7 +210,7 @@ for epoch in range(epochs):
 
 #%%
 #############################
-# PLOT
+# PLOT ROC
 ##############################
 
 # ROC Curve Calculation and Plotting
@@ -258,4 +258,43 @@ plt.title('Receiver Operating Characteristic to Multi-Class Sarc Subtypes')
 plt.legend(loc="lower right")
 plt.savefig('/home/arianna/subtype_dl/roc_curve_multiclass.pdf', format='pdf', dpi=300)
 plt.show()
+
+
 # %%
+######################################
+#CALCULATE ACCURACY AND PLOT CONFUSIUON MATRIX
+######################################
+
+import torch
+from sklearn.metrics import confusion_matrix, accuracy_score
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+
+
+def calculate_accuracy_and_plot_confusion_matrix(model, test_loader, device, class_names):
+    model.eval()
+    all_targets = []
+    all_predicted = []
+
+    with torch.no_grad():
+        for inputs, targets in test_loader:
+            inputs, targets = inputs.to(device), targets.to(device)
+            outputs = model(inputs)
+            _, predicted = torch.max(outputs, 1)  
+            all_predicted.extend(predicted.cpu().numpy())
+            all_targets.extend(targets.cpu().numpy())
+
+    accuracy = accuracy_score(all_targets, all_predicted) * 100
+    cm = confusion_matrix(all_targets, all_predicted)
+
+    # Plot Confusion Matrix
+    plt.figure(figsize=(8, 6))
+    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', cbar=False,
+                xticklabels=class_names, yticklabels=class_names)
+    plt.xlabel('Predicted Label')
+    plt.ylabel('True Label')
+    plt.title('Confusion Matrix')
+    plt.show()
+
+    return accuracy, cm
