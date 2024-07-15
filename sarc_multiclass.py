@@ -244,11 +244,6 @@ for i, color in zip(range(len(cancer_type_mapping)), colors):
              ''.format(cancer_type_mapping[i], roc_auc[i]))
 
 
-#for i, color in zip(range(num_classes), colors):
-#    plt.plot(fpr[i], tpr[i], color=color, lw=2,
-#             label='ROC curve of class {0} (area = {1:0.2f})'
-#             ''.format(i, roc_auc[i]))
-
 plt.plot([0, 1], [0, 1], 'k--', lw=2)
 plt.xlim([0.0, 1.0])
 plt.ylim([0.0, 1.05])
@@ -265,36 +260,57 @@ plt.show()
 #CALCULATE ACCURACY AND PLOT CONFUSIUON MATRIX
 ######################################
 
+import matplotlib.pyplot as plt
+from sklearn.metrics import roc_curve, auc, accuracy_score, confusion_matrix
+from sklearn.preprocessing import label_binarize
+import numpy as np
 import torch
-from sklearn.metrics import confusion_matrix, accuracy_score
+
+# Assuming you have:
+# - all_targets: list of true labels (0, 1, 2, 3, 4) for each subtype
+# - all_outputs: list of raw logits from your model (before softmax)
+# - y_test_binarized: binarized labels obtained from label_binarize
+
+# Convert outputs to probabilities
+all_outputs = np.array(all_outputs)
+all_outputs_prob = torch.softmax(torch.tensor(all_outputs), dim=1).numpy()
+
+# Get predicted class labels
+y_pred = np.argmax(all_outputs_prob, axis=1)
+
+print(y_pred)
+
+
+#---------------
+#ACCURACY
+
+# Calculate accuracy
+accuracy = accuracy_score(y_test, y_pred) * 100
+print(f"Accuracy: {accuracy:.2f}%")
+
+# Calculate confusion matrix
+cm = confusion_matrix(y_test, y_pred)
+
+#------------------
+#CONFUSION MATRIX
+
+# Plot the confusion matrix 
 import matplotlib.pyplot as plt
 import seaborn as sns
-import numpy as np
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 
+# Class labels (replace with your actual class names)
+class_names = ['Dedifferentiated Liposarcoma', 'Leiomyosarcoma',  'Myxofibrosarcoma',
+           'Undifferentiated Pleomorphic Sarcoma', 'Synovial Sarcoma']
 
-def calculate_accuracy_and_plot_confusion_matrix(model, test_loader, device, class_names):
-    model.eval()
-    all_targets = []
-    all_predicted = []
+# Plot the confusion matrix using seaborn with custom settings
+plt.figure(figsize=(10, 8))  # Adjust the figure size as needed
+sns.set_theme(font_scale=1.2)  # Adjust font size for readability
+cmd = ConfusionMatrixDisplay(cm, display_labels=class_names)
+cmd.plot(cmap='Blues', values_format='d')  # Use 'Blues' colormap and integer format for values
+plt.title('Confusion Matrix')
+plt.xticks(rotation=45, ha='right')  # Rotate x-axis labels for readability
+plt.savefig('/home/arianna/subtype_dl/conf_matrix_multiclass.pdf', format='pdf', dpi=300)
+plt.show()
 
-    with torch.no_grad():
-        for inputs, targets in test_loader:
-            inputs, targets = inputs.to(device), targets.to(device)
-            outputs = model(inputs)
-            _, predicted = torch.max(outputs, 1)  
-            all_predicted.extend(predicted.cpu().numpy())
-            all_targets.extend(targets.cpu().numpy())
-
-    accuracy = accuracy_score(all_targets, all_predicted) * 100
-    cm = confusion_matrix(all_targets, all_predicted)
-
-    # Plot Confusion Matrix
-    plt.figure(figsize=(8, 6))
-    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', cbar=False,
-                xticklabels=class_names, yticklabels=class_names)
-    plt.xlabel('Predicted Label')
-    plt.ylabel('True Label')
-    plt.title('Confusion Matrix')
-    plt.show()
-
-    return accuracy, cm
+# %%
