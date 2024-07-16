@@ -61,6 +61,7 @@ print(type(y_binarized))
 
 # Split the data into train and test sets
 X_train, X_test, y_train, y_test = train_test_split(rna.values, truth_coded, test_size=0.2, random_state=42)
+X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.2, random_state=42) #validation data
 y_train_binarized, y_test_binarized = train_test_split(y_binarized, test_size=0.2, random_state=42)
 
 # Standardize the features
@@ -81,6 +82,8 @@ y_test_binarized = torch.tensor(y_test_binarized, dtype=torch.float32)
 # Create TensorDataset
 train_dataset = TensorDataset(x_train, y_train)
 test_dataset = TensorDataset(x_test, y_test)
+#validation
+
 
 # Define batch size
 batch_size = 122
@@ -88,7 +91,7 @@ batch_size = 122
 # Create DataLoaders
 train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
 test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
-
+#validation
 # %%
 #################################
 #DEFINE THE NETWORK MODEL
@@ -97,23 +100,24 @@ test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 class MultiClassModel(nn.Module):
     def __init__(self, input_size, num_classes):
         super(MultiClassModel, self).__init__()
-        self.linear1 = nn.Linear(input_size, 64)
-        self.linear2 = nn.Linear(64, 128)
-        self.linear3 = nn.Linear(128, 96)
-        self.linear4 = nn.Linear(96, 32)
-        self.linear5 = nn.Linear(32, num_classes)
-        self.relu = nn.ReLU()
-        self.dropout = nn.Dropout(p=0.25)
+       
+        hidden_size1 = 128
+        hidden_size2 = 64
+        
+        self.mlp = nn.Sequential(
+            nn.Linear(input_size, hidden_size1),
+            nn.BatchNorm1d(hidden_size1),
+            nn.SiLU(),
+            nn.Dropout(),
+            nn.Linear(hidden_size1,hidden_size2),
+            nn.LayerNorm(hidden_size2),
+            nn.SiLU(),
+            nn.Dropout(),
+            nn.Linear(hidden_size2,num_classes)
+        ) 
 
     def forward(self, x):
-        x = self.relu(self.linear1(x))
-        x = self.dropout(x)
-        x = self.relu(self.linear2(x))
-        x = self.dropout(x)
-        x = self.relu(self.linear3(x))
-        x = self.dropout(x)
-        x = self.relu(self.linear4(x))
-        x = self.linear5(x)  # Output logits for each class
+        x = self.mlp(x)
         return x
 
 # Define input size and number of classes
@@ -146,6 +150,8 @@ epochs = 100
 epoch_count = []
 train_loss_values = []
 test_loss_values = []
+
+best_test_loss=np.inf
 
 # Training and evaluation loop
 for epoch in range(epochs):
@@ -198,15 +204,30 @@ for epoch in range(epochs):
 
     test_loss = test_loss / len(test_loader.dataset)
     test_accuracy = 100.0 * correct_test / total_test
-
-    # Print progress every 10 epochs
+    
+        # Print progress every 10 epochs
     if epoch % 10 == 0:
         print(f'Epoch: {epoch:4} | Train Loss: {train_loss:.4f} | Train Accuracy: {train_accuracy:.2f}% | Validation Loss: {test_loss:.4f} | Validation Accuracy: {test_accuracy:.2f}%')
+
+    
+    if test_loss < best_test_loss:
+        best_test_loss =test_loss
+        best_model_weights=model.state_dict()    
+  
 
     # Append values to lists for plotting
     epoch_count.append(epoch)
     train_loss_values.append(train_loss)
     test_loss_values.append(test_loss)
+
+model.load_state_dict(best_model_weights)
+#deploy on test set 
+#test loader + dataset
+#no epoch but yust one 
+
+#ROC and CONF MATRIX on this test set data nna3
+
+
 
 #%%
 #############################
